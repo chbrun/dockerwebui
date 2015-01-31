@@ -1,0 +1,19 @@
+{%extends "foundation_base.html" %}
+{% block body_content %}
+<div class="row">
+    <div class="large-12 columns">
+        <div class="fixed">
+            <nav class="top-bar" data-topbar>
+                <section class="top-bar-section">
+                    <ul class="left">
+                        <li><a href="/">Docker UI</a></li>
+                    </ul>
+                </section>
+            </nav>
+        </div>
+    </div>
+</div>
+<div class="row">
+    {% block content %} {% endblock %}
+<div>
+{% endblock %}

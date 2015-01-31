@@ -1,0 +1,33 @@
+{%extends "layout.html" %}
+{% block content %}
+    <div class="small-8 small-centered columns">
+    <h1>info</h1>
+    {% if info %}
+    <table class="striped">
+        <thead>
+            <tr>
+                <th>Variable<th>
+                <th>Valeur<th>
+            </tr>
+        </thead>
+        {% for key,value in info.iteritems() %}
+            <tr>
+                <td>{{ key }}</td>
+                <td>
+                    {% if value is string %}
+                        {{ value }}
+                    {% else %}
+                        {{ value }}
+                        <ul>
+                            {%for item in value %}
+                                <li>{{ item }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+    {% endif %}
+    </div>
+{% endblock %}
